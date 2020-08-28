@@ -1,30 +1,36 @@
+<svelte:head>
+  <title>Tabla Covid Argentina</title>
+  <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.css"> 
+</svelte:head>
+
+
 <script>
   import { onMount } from "svelte";
-  import Continent from "./Continent.svelte";
-  import Continents from "./Continents.svelte";
+  import Day from "./Day.svelte";
+  import Days from "./Days.svelte";
 
-  let continents;
-  let continent;
+  let days;
+  let day;
 
 </script>
 
-<svelte:head>
-  <title>Svelte Continent App</title>
-</svelte:head>
 
 <style>
 
-main {
-  background-color: lavenderblush;
-  font-size: 15px;
-}
+  main {  
+    font-size: 15px;
+    height:80%
+  }
   h1 {
     font-size: 25px;
+    text-align: center;
+    color: red;
 	}
 
 </style>
-
-  <h1>The Seven Continents Svelte App</h1>
+<body>
+  <h1>El covid en Argentina</h1>
 <main>
-		<Continents {continents} />
+		<Days {days} />
 </main>
+</body>
